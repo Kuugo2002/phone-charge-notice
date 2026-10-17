@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">充满提醒</string>
+    <string name="app_subtitle">电量达到 100% 时，点亮屏幕并弹出通知</string>
+    <string name="battery_reading">正在读取电池状态…</string>
+    <string name="service_preparing">监控服务准备中</string>
+    <string name="service_running">监控服务已开启</string>
+    <string name="service_root_running">监控服务已开启 · Root 增强已启用</string>
+    <string name="root_enhance">Root 增强保活</string>
+    <string name="root_description">开启后会请求 Root 权限，将本应用加入系统待机白名单，并在充满时使用 Root 再次唤醒屏幕。</string>
+    <string name="root_requesting">正在请求 Root 权限…</string>
+    <string name="root_disabling">正在关闭 Root 增强…</string>
+    <string name="root_failed">Root 操作失败，请检查授权管理器</string>
+    <string name="root_failed_toast">未获得 Root 权限或命令执行失败</string>
+    <string name="test_alert">测试提醒</string>
+    <string name="test_sent">已发送测试提醒</string>
+    <string name="notification_permission_needed">请先允许通知权限</string>
+    <string name="notification_settings">检查通知设置</string>
+    <string name="usage_tip">提示：某些国产系统还需要在系统设置中允许本应用自启动，并将通知设为可在锁屏显示。每次接上充电器只提醒一次，拔掉后才会重置。</string>
+    <string name="battery_unavailable">暂时无法读取电量</string>
+    <string name="battery_charging">%1$d%% · 正在充电</string>
+    <string name="battery_not_charging">%1$d%% · 未充电</string>
+</resources>
