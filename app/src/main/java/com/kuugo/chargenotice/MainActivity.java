@@ -132,9 +132,9 @@ public class MainActivity extends Activity {
             return;
         }
         int level = battery.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-        int scale = battery.getIntExtra(BatteryManager.EXTRA_SCALE, 100);
+        int scale = battery.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         int plugged = battery.getIntExtra(BatteryManager.EXTRA_PLUGGED, 0);
-        int percent = level >= 0 && scale > 0 ? Math.round(level * 100f / scale) : -1;
+        int percent = BatteryLevel.percentage(level, scale);
         updateBatteryText(percent, plugged != 0);
     }
 

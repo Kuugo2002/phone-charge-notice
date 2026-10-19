@@ -55,12 +55,12 @@ public class ChargeMonitorService extends Service {
 
     private void handleBattery(Intent intent) {
         int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-        int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, 100);
-        int status = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+        int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         int pluggedValue = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, 0);
-        int percent = level >= 0 && scale > 0 ? Math.round(level * 100f / scale) : -1;
+        int percent = BatteryLevel.percentage(level, scale);
         boolean plugged = pluggedValue != 0;
-        boolean full = status == BatteryManager.BATTERY_STATUS_FULL || percent >= 100;
+        // A system FULL status alone must not trigger an alert below 100%.
+        boolean full = percent == 100;
 
         Intent state = new Intent(ACTION_STATE_CHANGED)
                 .setPackage(getPackageName())

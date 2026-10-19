@@ -18,3 +18,9 @@ A lightweight native Android app that wakes the screen and displays a high-prior
 Open the project in Android Studio, wait for Gradle synchronization to finish, and then run the app. The project requires JDK 17 and Android SDK 36 or later.
 
 Allow notification access when opening the app for the first time. Some Android variants may also require you to enable auto-start and permit notifications on the lock screen in system settings.
+
+## Automated builds
+
+The [Android CI](.github/workflows/android.yml) GitHub Actions workflow runs on pushes and pull requests. You can also start it manually from **Actions → Android CI → Run workflow** in the repository.
+
+The workflow uses JDK 17 and Android SDK 36, runs unit tests and Android Lint, then builds a debug APK if the checks pass. Download `ChargeNotice-debug-<run number>` from the run's **Artifacts** section for the test APK. Test and lint reports are available in `android-reports-<run number>`. Artifacts are retained for 14 days. No additional secrets are required.
