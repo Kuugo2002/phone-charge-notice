@@ -1,9 +1,35 @@
+# Editors and OS files
 *.iml
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Flutter and Dart generated files (keep pubspec.lock for reproducible builds)
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+coverage/
+
+# Android machine-specific files and caches
 .gradle/
-/local.properties
-/.idea/
-/build/
-/captures/
+.kotlin/
+local.properties
+captures/
 .externalNativeBuild/
 .cxx/
-app/build/
+/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+
+# Installers, signing keys, and local signing configuration
+/dist/
+*.apk
+*.aab
+*.jks
+*.keystore
+/android/key.properties
+
+# Retired Java upgrade tooling
+/.github/modernize/

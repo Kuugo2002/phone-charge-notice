@@ -1,0 +1,12 @@
+* text=auto
+*.dart text eol=lf
+*.java text eol=lf
+*.gradle text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+android/gradlew text eol=lf
+*.jar binary
+*.apk binary
